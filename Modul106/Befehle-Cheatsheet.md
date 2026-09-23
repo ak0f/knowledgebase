@@ -155,6 +155,50 @@ SET foreign_key_checks = 1; -- wieder einschalten
 
 ---
 
+## Transaktion (TCL)
+
+```sql
+START TRANSACTION;
+UPDATE konto SET saldo = saldo - 500 WHERE konto_nr = 786345343;
+UPDATE konto SET saldo = saldo + 500 WHERE konto_nr = 123325932;
+COMMIT;
+-- oder bei Fehler:
+ROLLBACK;
+
+-- Autocommit steuern
+SET AUTOCOMMIT = 0; -- deaktivieren, Änderungen brauchen COMMIT
+SET AUTOCOMMIT = 1; -- Standard: jede Änderung wird sofort geschrieben
+```
+
+**ACID:** Atomic · Consistent · Isolated · Durable
+
+---
+
+## Datenbank optimieren
+
+```sql
+-- Query analysieren
+EXPLAIN SELECT * FROM tabelle WHERE spalte = 'x';
+
+-- Tabellengrösse auslesen
+SELECT table_schema, table_name,
+       ROUND(((data_length + index_length) / 1024 / 1024), 2) AS size_in_mb
+FROM information_schema.tables
+WHERE table_schema = 'db_name';
+
+-- Fragmentierung prüfen und optimieren
+SHOW TABLE STATUS;
+OPTIMIZE TABLE tabellen_name;
+
+-- Nur nötige Spalten laden + limitieren
+SELECT spalte1, spalte2 FROM tabelle LIMIT 100;
+
+-- Index setzen (für JOIN/WHERE/ORDER BY Spalten)
+ALTER TABLE tabellen_name ADD INDEX idx_name (spalten_name);
+```
+
+---
+
 ## Passwort Hashing
 
 ```sql

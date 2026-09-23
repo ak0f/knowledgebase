@@ -68,6 +68,27 @@
 
 ---
 
+## Modul 6 – Transaktion
+
+- [ ] Erklären, was eine Transaktion ist und wozu sie gebraucht wird
+- [ ] Das Alles-oder-nichts-Prinzip an einem Beispiel erklären (Überweisung)
+- [ ] ACID-Kriterien nennen und je in einem Satz erklären
+- [ ] `START TRANSACTION`, `COMMIT`, `ROLLBACK` korrekt anwenden
+- [ ] Autocommit-Modus erklären und mit `SET AUTOCOMMIT=0/1` steuern
+
+---
+
+## Modul 7 – Datenbank optimieren
+
+- [ ] Performancerelevante Faktoren nennen (Hardware, Netzwerk, Query-Komplexität, Datenmenge, Resultatgrösse, Fragmentierung)
+- [ ] Performance messen: Duration/Fetch in Workbench, `EXPLAIN` einsetzen
+- [ ] `information_schema` nutzen, um Datenbank-/Tabelleninfos auszulesen
+- [ ] Fragmentierung erkennen (`SHOW TABLE STATUS`) und beheben (`OPTIMIZE TABLE`)
+- [ ] Resultatgrösse optimieren (`SELECT` nur nötige Spalten, `LIMIT`)
+- [ ] Index setzen (`ALTER TABLE ... ADD INDEX`) und begründen, wofür sich das lohnt
+
+---
+
 ## Schnell-Wiederholung: Wichtigste Befehle
 
 ```sql
@@ -96,6 +117,15 @@ GRANT SELECT, INSERT ON db.t TO u@localhost;
 -- Migration
 LOAD DATA INFILE 'datei.csv' INTO TABLE t
 FIELDS TERMINATED BY ';' LINES TERMINATED BY '\r\n' IGNORE 1 ROWS;
+
+-- Transaktion
+START TRANSACTION;
+UPDATE t SET c = 'x' WHERE id = 1;
+COMMIT; -- oder ROLLBACK;
+
+-- Optimierung
+EXPLAIN SELECT * FROM t WHERE c = 'x';
+ALTER TABLE t ADD INDEX idx_c (c);
 ```
 
 ---
