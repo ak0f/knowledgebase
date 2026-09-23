@@ -13,6 +13,8 @@
 | 3 | Datenmigration | [[03 - Datenmigration]] |
 | 4 | Datenschutz und Berechtigungen | [[04 - Datenschutz und Berechtigungen]] |
 | 5 | Joins und Aggregationsfunktionen | [[05 - Joins und Aggregationsfunktionen]] |
+| 6 | Transaktion | [[06 - Transaktion]] |
+| 7 | Datenbank optimieren | [[07 - DB-optimieren]] |
 
 ---
 
@@ -40,3 +42,7 @@
 - [ ] Tabellen mit `JOIN`, `LEFT JOIN`, `RIGHT JOIN` verknüpfen
 - [ ] Mit `LIKE`, `BETWEEN`, `IN`/`NOT IN` filtern
 - [ ] Aggregatfunktionen mit `GROUP BY` / `HAVING` einsetzen
+- [ ] Transaktionen mit `START TRANSACTION`, `COMMIT`, `ROLLBACK` steuern
+- [ ] ACID-Kriterien erklären (Atomic, Consistent, Isolated, Durable)
+- [ ] Performancerelevante Faktoren nennen und mit `EXPLAIN` analysieren
+- [ ] Abfragen mit Indizes (`ALTER TABLE ... ADD INDEX`) optimieren

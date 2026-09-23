@@ -12,6 +12,8 @@
 3. [[03 - Datenmigration]]
 4. [[04 - Datenschutz und Berechtigungen]]
 5. [[05 - Joins und Aggregationsfunktionen]]
+6. [[06 - Transaktion]]
+7. [[07 - DB-optimieren]]
 
 ---
 
