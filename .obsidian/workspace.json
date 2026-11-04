@@ -1,0 +1,217 @@
+{
+  "main": {
+    "id": "3c6cc363f6586915",
+    "type": "split",
+    "children": [
+      {
+        "id": "a52659efe04e63e0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "09d33ebf7c83119c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Telematik/06 - Zahlensysteme.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "06 - Zahlensysteme"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "635cf80426c016f8",
+    "type": "split",
+    "children": [
+      {
+        "id": "a458f9d19e9646c7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e2d8a0995036384d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Dateiexplorer"
+            }
+          },
+          {
+            "id": "1e94781091539718",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Suchen"
+            }
+          },
+          {
+            "id": "3612b7c9bfd3535b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Lesezeichen"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6e9994969ca11566",
+    "type": "split",
+    "children": [
+      {
+        "id": "9c0663109a10ee88",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8e469017faa52083",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Rückverweise"
+            }
+          },
+          {
+            "id": "b21ef41a079b3e1c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Ausgehende Links"
+            }
+          },
+          {
+            "id": "c2996b8e98104cda",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "ad6d86f0e129c0e4",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Alle Eigenschaften"
+            }
+          },
+          {
+            "id": "b21db712c1462e62",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Modul106/05 - Joins und Aggregationsfunktionen.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Gliederung"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Schnellauswahl öffnen": false,
+      "graph:Graph-Ansicht öffnen": false,
+      "canvas:Neuen Canvas erstellen": false,
+      "daily-notes:Heutige Notiz öffnen": false,
+      "templates:Vorlage einfügen": false,
+      "command-palette:Befehlspalette öffnen": false,
+      "bases:Neue Base erstellen": false
+    }
+  },
+  "active": "09d33ebf7c83119c",
+  "lastOpenFiles": [
+    "Telematik/05 - Adressierung MAC IPv4 IPv6.md",
+    "Telematik/06 - Zahlensysteme.md",
+    "Telematik/07 - IPv4 und CIDR.md",
+    "Telematik/01 - Einstieg und Netzarten.md",
+    "Telematik/03 - Schichtenmodelle.md",
+    "Modul106 ÜK/05 - Joins und Aggregationsfunktionen.md",
+    "Modul187ÜK/06 - Netzsicherheit.md",
+    "Modul106 ÜK/Befehle-Cheatsheet.md",
+    "Modul106 ÜK/00 - MOC.md",
+    "Modul106/07 - DB-optimieren.md",
+    "Modul106 ÜK/README.md",
+    "Modul106 ÜK/07 - DB-optimieren.md",
+    "Modul106 ÜK/Prüfungsvorbereitung.md",
+    "Modul106 ÜK/06 - Transaktion.md",
+    "Modul106 ÜK/04 - Datenschutz und Berechtigungen.md",
+    "Modul106 ÜK/03 - Datenmigration.md",
+    "Modul106 ÜK/02 - Struktur und Daten einer DB verändern.md",
+    "Modul106 ÜK/01 - SQL-Datentypen.md",
+    "Modul106 ÜK",
+    "Modul106/06 - Transaktion.md",
+    "Modul106/05 - Joins und Aggregationsfunktionen.md",
+    "Modul106/Befehle-Cheatsheet.md",
+    "Modul106/Prüfungsvorbereitung.md",
+    "Modul106/01 - SQL-Datentypen.md"
+  ]
+}
