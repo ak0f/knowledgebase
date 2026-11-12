@@ -5,162 +5,83 @@
 
 ---
 
-## Lernziele
-
-- [ ] Textdateien schreiben, lesen und anhängen
-- [ ] `.format()` und f-Strings vergleichen
-- [ ] Texte durchsuchen (`in`, `find`, `index`)
-- [ ] Strings und Listen mit `split()` / `join()` kombinieren
-- [ ] Zeichen ersetzen, prüfen und zählen
-
----
-
-## Dateien schreiben und lesen
+## Dateien
 
 ```python
-# Schreiben (überschreibt!)
-with open("example.txt", "w") as file:
-    file.write("Dies ist der erste Satz.\n")
-    file.write("Dies ist der zweite Satz.")
+with open("example.txt", "w") as file:    # w = überschreibt
+    file.write("Erster Satz.\n")
 
-# Alles lesen
-with open("example.txt", "r") as file:
+with open("example.txt", "a") as file:    # a = hängt an
+    file.write("Zweiter Satz.\n")
+
+with open("example.txt", "r") as file:    # r = lesen
     text = file.read()
-    print(text)
 
-# Zeilenweise lesen
 with open("example.txt", "r") as file:
     for line in file:
-        print(line, end="")
+        print(line, end="")               # end="" gegen doppelte Leerzeile
 ```
 
-- `end=""` verhindert doppelte Zeilenumbrüche (jede Zeile endet schon mit `\n`)
-- `with` schliesst die Datei **automatisch**, auch bei Fehlern (empfohlen statt `open()` + `close()`)
-- Wofür: Logs, Einstellungen, Import/Export, kleine JSON-Datenbanken
-
-### Modi
-
-| Modus | Bedeutung | Bei existierender Datei |
-|-------|-----------|--------------------------|
-| `"r"` | read (lesen) | liest den Inhalt |
-| `"w"` | write (schreiben) | **löscht** den bisherigen Inhalt |
-| `"a"` | append (anhängen) | hängt unten an |
-
-```python
-name = input("Wie heisst du? ")
-with open("log.txt", "a") as file:
-    file.write(f"{name} hat das Programm gestartet.\n")
-```
-
-> Auch beim Anhängen `\n` verwenden, sonst kleben die Einträge aneinander.
-
-**Übung Begrüssungs-Generator:** Vorname, Nachname, Motto, Geburtsjahr abfragen → f-String-Text → in `greetings.txt` speichern (`"w"`, dann `"a"`) → Datei wieder einlesen und ausgeben.
+- `with` schliesst die Datei automatisch (besser als `open()` + `close()`)
+- `\n` = Zeilenumbruch, beim Anhängen nicht vergessen
+- Wofür: Logs, Einstellungen, Import/Export
 
 ---
 
-## String-Formatierung mit .format()
+## .format()
 
 ```python
-print("Hallo, {}!".format("Sam"))
-print("{} ist {} Jahre alt.".format("Anna", 25))
-print("{1} ist {0} Jahre alt.".format(25, "Luca"))
-print("Name: {name}, Alter: {age}".format(name="Maya", age=30))
+"Hallo, {}!".format("Sam")
+"{1} ist {0} Jahre alt.".format(25, "Luca")
+"Name: {name}, Alter: {age}".format(name="Maya", age=30)
 ```
 
-| Methode | Vorteil | Beispiel |
-|---------|---------|----------|
-| f-String | kürzer, lesbarer | `f"Hallo {name}"` |
-| `.format()` | flexibler, kompatibel (alter Code, Templates) | `"Hallo {}".format(name)` |
+f-String ist kürzer, `.format()` ist kompatibler (alter Code, Templates).
 
 ---
 
-## Texte durchsuchen
+## Suchen
 
-| Methode | Rückgabe | Bei "nicht gefunden" |
-|---------|----------|----------------------|
-| `in` | `True` / `False` | `False` |
-| `.find()` | Index | `-1` |
-| `.index()` | Index | **ValueError** |
+| Methode | Rückgabe | Nicht gefunden |
+|---------|----------|----------------|
+| `"x" in text` | `True` / `False` | `False` |
+| `text.find("x")` | Index | `-1` |
+| `text.index("x")` | Index | `ValueError` |
+
+---
+
+## Zeilen, Wörter, Listen
 
 ```python
-text = "Heute ist ein schöner Tag"
-print("Tag" in text)         # True
-print(text.find("schön"))    # 15
-print(text.find("cool"))     # -1
-print(text.index("ein"))     # Index oder ValueError
+text.splitlines()          # in Zeilen
+len(text.split())          # Anzahl Wörter
+"Max;Meier;1999".split(";")  # ['Max', 'Meier', '1999']
+", ".join(liste)           # Liste → String
 ```
 
 ---
 
-## Zeilen und Wörter
-
-```python
-text = "Zeile 1\nZeile 2\nZeile 3"
-lines = text.splitlines()    # ['Zeile 1', 'Zeile 2', 'Zeile 3']
-print(len(lines))            # 3
-
-words = "Das ist ein einfacher Text".split()
-print(f"Anzahl Wörter: {len(words)}")
-```
-
----
-
-## Strings und Listen kombinieren
-
-```python
-zeile = "Max;Meier;1999"
-teile = zeile.split(";")      # ['Max', 'Meier', '1999']
-
-namen = "Anna,Ben,Clara,David"
-liste = namen.split(",")
-for name in liste:
-    if name.startswith("A"):
-        print(f"{name} beginnt mit A")
-print(", ".join(liste))       # Liste wieder zu String
-```
-
-- `split(trenner)` → String zu Liste
-- `trenner.join(liste)` → Liste zu String
-
----
-
-## Zeichen ersetzen, filtern, säubern
+## Prüfen und säubern
 
 | Methode | Wirkung |
 |---------|---------|
-| `.capitalize()` | erster Buchstabe gross |
-| `.title()` | jedes Wort gross |
-| `.isdigit()` | nur Ziffern? |
-| `.isalpha()` | nur Buchstaben? |
+| `.capitalize()` / `.title()` | erster Buchstabe / jedes Wort gross |
+| `.isdigit()` / `.isalpha()` | nur Ziffern / nur Buchstaben? |
 | `.startswith(x)` | beginnt mit x? |
+| `.count(x)` | wie oft kommt x vor |
 
 ```python
-raw = "   Passwort123  "
-clean = raw.strip().lower()   # Methoden kombinieren
+clean = "  Passwort123 ".strip().lower()    # Methoden kombinieren
 ```
 
----
-
-## Zeichenstatistik
+**Zeichen zählen mit Dictionary:**
 
 ```python
-print("Banane".count("a"))   # 2
-
-# Häufigkeit speichern (Dictionary)
-text = "Apfelsaft"
 counter = {}
-for char in text.lower():
-    if char in counter:
-        counter[char] += 1
-    else:
-        counter[char] = 1
-print(counter)
+for char in "Apfelsaft".lower():
+    counter[char] = counter.get(char, 0) + 1
 ```
 
 ---
 
-## Verknüpfungen
-
-→ [[10 - Characters und Strings]]
-→ [[12 - Listen und Dictionaries]]
-→ [[16 - Stdin und Stdout]]
+→ [[10 - Characters und Strings]] · [[12 - Listen und Dictionaries]] · [[16 - Stdin und Stdout]]

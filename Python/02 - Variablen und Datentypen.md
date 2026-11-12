@@ -5,131 +5,83 @@
 
 ---
 
-## Lernziele
+## Variablen
 
-- [ ] Variablen erstellen und verwenden
-- [ ] Namenskonventionen (snake_case) anwenden
-- [ ] Die 4 Datentypen int, float, str, bool kennen
-- [ ] Casting mit `int()`, `float()`, `str()`, `bool()` anwenden
-- [ ] Erklären, dass `input()` immer einen String liefert
-
----
-
-## Was ist eine Variable?
-
-Ein **Platzhalter** für einen Wert. Wie eine beschriftete Schublade im Speicher des PCs.
+Eine Variable ist ein Platzhalter für einen Wert, wie eine beschriftete Schublade.
 
 ```python
-x = 5            # = ist der Zuweisungsoperator
-name = "Arthur"
-print(name)      # Arthur
+name = "Arthur"      # = ist der Zuweisungsoperator
+x = 5
+print(name)
 ```
 
-- Name links, Wert rechts vom `=`
-- Code wird **von oben nach unten** ausgeführt, eine Variable gilt erst **nach** dem Erstellen
-- Vorteile: Lesbarkeit, Wartbarkeit, Flexibilität
+- Name links, Wert rechts
+- Code läuft von oben nach unten, eine Variable gibt es erst **nach** dem Erstellen
+- Vorteile: lesbar, nur an einer Stelle ändern
 
 ```python
-a = 10
-b = 8
-c_squared = a * a + b * b
-print("c squared is: ", c_squared)   # c squared is: 164
-```
-
-### Eingabe mit input()
-
-```python
-user_input = input("please enter something: ")
-print("User entered: ", user_input)
+user_input = input("Eingabe: ")
 ```
 
 ---
 
-## Namenskonventionen
+## Namen
 
-Ein Variablenname ist **eine einzige Zeichenkette** (keine Leerzeichen).
+Ein Name ist ein einziges Wort ohne Leerzeichen.
 
-| Stil | Beispiel | Verwendung |
-|------|----------|------------|
-| **snake_case** | `user_name` | Python: Variablen und Funktionen |
+| Stil | Beispiel | Wo |
+|------|----------|-----|
+| **snake_case** | `user_name` | Python (Variablen, Funktionen) |
 | camelCase | `userName` | JavaScript, Java |
-| PascalCase | `UserName` | C#, in Python für Klassen |
+| PascalCase | `UserName` | C#, Klassen in Python |
 | kebab-case | `user-name` | URLs, CSS |
 
-> **Tipp:** sprechende Namen wählen. `user_name` statt `b`.
+Sprechende Namen: `user_name` statt `b`.
 
 ---
 
 ## Datentypen
 
-| Datentyp | Beispiel | Beschreibung |
-|----------|----------|--------------|
-| `str` (String) | `x = "Hello World"` | Zeichenkette |
-| `int` (Integer) | `x = 42` | Ganzzahl |
-| `float` | `x = 3.1415` | Dezimalzahl |
-| `bool` (Boolean) | `x = True` / `False` | Wahrheitswert |
+| Typ | Beispiel |
+|-----|----------|
+| `str` | `"Hello"` |
+| `int` | `42` |
+| `float` | `3.1415` |
+| `bool` | `True` / `False` (gross schreiben!) |
 
-- `True` und `False` immer mit **Grossbuchstaben**
-- Der `+`-Operator **verbindet** Strings: `"Hello, " + "World!"`
-- Floats können kleine **Rundungsfehler** haben:
-
-```python
-print(0.0001 + 0.0003)   # nicht exakt 0.0004
-print(7 / 2)             # 3.5
-```
+- `+` verbindet Strings: `"Hello, " + "World!"`
+- Floats können kleine Rundungsfehler haben (`0.1 + 0.2`)
+- `type(x)` zeigt den Typ
 
 ---
 
 ## Dynamische Typisierung
 
-Der Typ wird **zur Laufzeit** durch den aktuellen Wert bestimmt.
+Der Typ hängt vom aktuellen Wert ab. Neue Zuweisung überschreibt Wert und Typ.
 
 ```python
 x = 42       # int
-x = 4.2      # float
-x = "four"   # str
-x = True     # bool
-print(type(x))
+x = "vier"   # str
 ```
-
-Jede neue Zuweisung überschreibt Wert **und** Datentyp. (In statisch typisierten Sprachen ist der Typ fix.)
 
 ---
 
-## Casting (Typumwandlung)
+## Casting
 
 | Funktion | Ergebnis |
 |----------|----------|
 | `int()` | ganze Zahl |
-| `float()` | Dezimalzahl |
-| `str()` | Zeichenkette |
-| `bool()` | Wahrheitswert |
+| `float()` | Kommazahl |
+| `str()` | Text |
+| `bool()` | Wahrheitswert (nicht-leerer String = `True`) |
+
+**`input()` gibt immer einen String zurück.** Zum Rechnen umwandeln:
 
 ```python
-s = "123"
-n = int(s)      # 123 (int)
-f = float(s)    # 123.0 (float)
-b = bool(s)     # True (nicht-leerer String)
-```
-
-### Casting bei input()
-
-`input()` liefert **immer** einen `str`, auch bei Zahlen.
-
-```python
-user_input = input()
-result = 42 + user_input        # Fehler! int + str
-
-user_input_int = int(user_input)
-result = 42 + user_input_int    # funktioniert
-print(result)
+zahl = int(input("Zahl: "))
+print(42 + zahl)
 ```
 
 ---
 
-## Verknüpfungen
-
-→ [[01 - Python und IDE]]
-→ [[03 - Mathematische Operatoren]]
-→ [[10 - Characters und Strings]]
-→ [[16 - Stdin und Stdout]]
+→ [[01 - Python und IDE]] · [[03 - Mathematische Operatoren]] · [[10 - Characters und Strings]]

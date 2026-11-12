@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Netzwerktechnik und -Services/Cisco IOS & Grundkonfig.md",
+                "file": "Netzwerktechnik und -Services/VLAN Grundlagen.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cisco IOS & Grundkonfig"
+              "title": "VLAN Grundlagen"
             }
           },
           {
@@ -41,16 +41,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Python/01 - Python und IDE.md",
+                "file": "Netzwerktechnik und -Services/Aufgabe VLAN & Trunking & Switching.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01 - Python und IDE"
+              "title": "Aufgabe VLAN & Trunking & Switching"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -216,8 +215,23 @@
       "bases:Neue Base erstellen": false
     }
   },
-  "active": "f62b2f7893d23c61",
+  "active": "b991d5e885b56907",
   "lastOpenFiles": [
+    "Python/04 - Boolsche Operatoren.md.tmp.40444.459afb5f086b",
+    "Python/03 - Mathematische Operatoren.md.tmp.40444.7c683e887a96",
+    "Python/02 - Variablen und Datentypen.md.tmp.40444.020b753110b4",
+    "Netzwerktechnik und -Services/Bilder/vlan-ethernet-frame-8021q.webp",
+    "Netzwerktechnik und -Services/Bilder/vlan-trunk-port.webp",
+    "Netzwerktechnik und -Services/Aufgabe Stern IOS.md",
+    "Telematik/00 - MOC.md",
+    "Netzwerktechnik und -Services/Cisco IOS & Grundkonfig.md",
+    "Netzwerktechnik und -Services/Aufgabe VLAN & Trunking & Switching.md",
+    "Netzwerktechnik und -Services/VLAN Grundlagen.md",
+    "Netzwerktechnik und -Services/Bilder/vlan-access-port.png",
+    "Netzwerktechnik und -Services/Bilder/vlan-was-ist-ein-vlan.png",
+    "Netzwerktechnik und -Services/Bilder/vlan-broadcast-domaene.png",
+    "Netzwerktechnik und -Services/Bilder",
+    "Python/01 - Python und IDE.md",
     "Python/00 - MOC.md",
     "Python/12 - Listen und Dictionaries.md",
     "Python/09 - Indents und Scopes.md",
@@ -227,14 +241,7 @@
     "Python/Bilder/pycharm-oberflaeche.png",
     "Python/Bilder/pycharm-new-project.png",
     "Python/Bilder/python-installer.png",
-    "Python/Bilder/uml-beispiel.png",
-    "Netzwerktechnik und -Services/Cisco IOS & Grundkonfig.md",
-    "Netzwerktechnik und -Services/Aufgabe Stern IOS.md",
-    "Netzwerktechnik und -Services/Aufgabe VLAN & Trunking & Switching.md",
     "Python/Python-Cheatsheet.md",
-    "Python/Bilder/uml-symbole-2.png",
-    "Python/Bilder/uml-symbole.png",
-    "Python/Bilder/turtle-sechseck.png",
     "Python/Bilder",
     "Python/07 - While-Schleife.md",
     "Python/06 - For-Schleife.md",
@@ -250,9 +257,6 @@
     "Python/11 - Strings Extended.md",
     "Python/10 - Characters und Strings.md",
     "Python/08 - Break und Continue.md",
-    "Python/04 - Boolsche Operatoren.md",
-    "Python/03 - Mathematische Operatoren.md",
-    "Python/02 - Variablen und Datentypen.md",
     "Python",
     "Netzwerktechnik und -Services",
     "Modul106 ÜK"

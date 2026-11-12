@@ -5,98 +5,59 @@
 
 ---
 
-## Lernziele
-
-- [ ] EVA-Prinzip und Kommandozeile erklären
-- [ ] Mit `print()` ausgeben (inkl. `sep` und `end`)
-- [ ] Mit `input()` Eingaben lesen
-- [ ] Eingaben in Zahlen umwandeln
-
----
-
 ## Kommandozeile und EVA
 
-- Die Kommandozeile war die **erste Schnittstelle** zwischen Mensch und Computer (vor GUIs und Maus)
-- **EVA-Prinzip:** **E**ingabe → **V**erarbeitung → **A**usgabe
-- Kommandozeile = Ein- und Ausgabe, der PC macht die Verarbeitung
-- Admins und Entwickler:innen nutzen sie täglich
+- Die Kommandozeile war die erste Schnittstelle zwischen Mensch und Computer (vor GUI und Maus)
+- **EVA-Prinzip:** Eingabe → Verarbeitung → Ausgabe
 
-| Kanal | Kurz | Richtung | Standard |
-|-------|------|----------|----------|
-| Standard Input | **stdin** | Eingabe ins Programm | Tastatur |
-| Standard Output | **stdout** | Ausgabe vom Programm | Bildschirm |
+| Kanal | Kurz | Standard |
+|-------|------|----------|
+| Standard Input | **stdin** | Tastatur |
+| Standard Output | **stdout** | Bildschirm |
 
 ---
 
-## Ausgabe mit print()
+## print()
 
 ```python
 print("Hallo Welt!")
-print(100)
 print(5 * 7)
-print("Hello", "World")    # mehrere Werte mit Komma → Leerzeichen dazwischen
+print("Hello", "World")     # mehrere Werte mit Komma
 ```
 
-- Jedes `print()` endet standardmässig mit einer **neuen Zeile**
-- Strings stehen immer in **Anführungszeichen**, sonst interpretiert Python es als Code:
-  - `Hello` → Fehler
-  - `"Hello"` → korrekt
-
-### Erweiterte Steuerung: sep und end
+- Jedes `print()` endet standardmässig mit einer neuen Zeile
+- Strings immer in Anführungszeichen, sonst denkt Python es ist Code
 
 | Parameter | Bedeutung | Standard |
 |-----------|-----------|----------|
-| `sep` | Trennzeichen zwischen den Elementen | Leerzeichen |
-| `end` | Abschluss der Ausgabe | Zeilenumbruch `\n` |
+| `sep` | Trennzeichen zwischen den Werten | Leerzeichen |
+| `end` | Abschluss der Ausgabe | Zeilenumbruch |
 
 ```python
 print("Hello", "World", sep=", ", end="")
-print("!")                        # Hello, World!
-
-print("He", "llo", sep="")        # Hello
-print("Hallo", "Welt", sep="_")   # Hallo_Welt
+print("!")                       # Hello, World!
+print("He", "llo", sep="")       # Hello
 ```
 
 ---
 
-## Eingabe mit input()
+## input()
 
-`input()` hält das Programm an, wartet auf Text und Enter.
-
-```python
-print(input())
-
-mein_name = input("Wie ist dein Name? ")   # Nachricht als Argument
-print("Hallo,", mein_name + "!")
-```
-
-- Die Nachricht im Argument sagt dem Benutzer, was erwartet wird
-- Die Antwort wird in einer **Variable** gespeichert
-
-### Zahlen eingeben
-
-`input()` liefert **immer** einen String.
+Hält das Programm an und wartet auf Text + Enter. Die Nachricht im Argument sagt dem Benutzer, was er eingeben soll.
 
 ```python
-age_str = input("Bitte gib dein Alter ein: ")
-print(type(age_str))           # <class 'str'>
-
-age = int(age_str)             # umwandeln
-age_next_year = age + 1
-print("Alter nächstes Jahr: " + str(age_next_year))   # für + mit String zurück zu str
-
-# direkt bei der Eingabe umwandeln
-age = int(input("Bitte gib dein Alter ein: "))
+name = input("Wie ist dein Name? ")
+print("Hallo,", name + "!")
 ```
 
-- `int()` für ganze Zahlen, `float()` für Kommazahlen
-- Verketten mit `+` geht nur String + String, daher `str()`
-- Mit f-Strings ist das Umwandeln nicht nötig: `print(f"Alter: {age}")`
+**Zahlen:** `input()` gibt immer einen String.
+
+```python
+age = int(input("Alter: "))
+print("Nächstes Jahr: " + str(age + 1))    # + braucht String, darum str()
+print(f"Nächstes Jahr: {age + 1}")         # f-String braucht kein str()
+```
 
 ---
 
-## Verknüpfungen
-
-→ [[02 - Variablen und Datentypen]]
-→ [[03 - Mathematische Operatoren]]
-→ [[10 - Characters und Strings]]
+→ [[02 - Variablen und Datentypen]] · [[03 - Mathematische Operatoren]] · [[10 - Characters und Strings]]

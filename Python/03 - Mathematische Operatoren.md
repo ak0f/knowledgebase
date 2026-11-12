@@ -1,115 +1,66 @@
 # Mathematische Operatoren
 
 **Modul:** Einstieg Programmieren (BE2026 PE)
-**Tags:** #Python #Mathe #Operatoren #math #Runden
+**Tags:** #Python #Mathe #math #Runden
 
 ---
 
-## Lernziele
-
-- [ ] Mit int und float rechnen
-- [ ] `//` (ganzzahlige Division) und `%` (Modulo) anwenden
-- [ ] Eingaben mit `int()` / `float()` umwandeln und damit rechnen
-- [ ] Mit `round()` und f-Strings runden und formatieren
-- [ ] Mathematische Funktionen und die Bibliothek `math` nutzen
-
----
-
-## Zahlentypen
-
-```python
-zahl1 = 5          # int
-preis = 19.95      # float (Punkt, kein Komma!)
-print(type(preis)) # <class 'float'>
-```
-
----
-
-## Grundrechenarten
+## Operatoren
 
 | Operator | Bedeutung | Beispiel |
 |----------|-----------|----------|
-| `+` | Addition | `5 + 3` → 8 |
-| `-` | Subtraktion | `10 - 4` → 6 |
-| `*` | Multiplikation | `6 * 2` → 12 |
-| `/` | Division | `8 / 2` → 4.0 |
-| `//` | Ganzzahlige Division | `7 // 2` → 3 |
+| `+ - *` | Plus, Minus, Mal | `6 * 2` → 12 |
+| `/` | Division (immer `float`) | `8 / 2` → 4.0 |
+| `//` | ganzzahlige Division | `7 // 2` → 3 |
 | `%` | Modulo (Rest) | `7 % 2` → 1 |
 | `**` | Potenz | `2 ** 3` → 8 |
 
-- `/` ergibt **immer** einen float
-- Punkt vor Strich, Klammern zuerst
-
-```python
-print(10 + 2 * 5)     # 20
-print((10 + 2) * 5)   # 60
-```
-
----
-
-## Ganzzahlige Division und Modulo
+Punkt vor Strich, Klammern zuerst. Kommazahlen mit **Punkt** schreiben (`19.95`).
 
 ```python
 minutes = 125
-hours = minutes // 60              # 2
-remaining_minutes = minutes % 60   # 5
-print(f"{minutes} Minuten sind {hours} Stunden und {remaining_minutes} Minuten.")
+print(minutes // 60, minutes % 60)   # 2 Stunden, 5 Minuten
 ```
 
-**Wofür?**
-
-- Uhrzeit umrechnen
-- Gerade/ungerade prüfen: `x % 2 == 0`
-- In Schleifen jeden 5. Schritt abfragen
-- Gruppen, Seitenumbrüche
+Modulo brauche ich z. B. für gerade/ungerade (`x % 2 == 0`) oder "jeden 5. Schritt".
 
 ---
 
-## Rechnen mit Eingaben
+## Mit Eingaben rechnen
 
-`input()` liefert immer einen **String** → umwandeln mit `int()` oder `float()`.
+`input()` gibt einen String → mit `int()` oder `float()` umwandeln.
 
 ```python
 length = float(input("Länge: "))
 width = float(input("Breite: "))
-area = length * width
-print(f"Die Fläche beträgt: {area} m2")
+print(f"Fläche: {length * width} m2")
 ```
 
-> Bei Eingaben, die keine Zahl sind, gibt es einen Fehler. Das fängt man später mit `try/except` ab.
+Wenn die Eingabe keine Zahl ist, gibt es einen Fehler (später mit `try/except` abfangen).
 
 ---
 
-## Runden und Formatieren
+## Runden und formatieren
 
 ```python
-value = 3.14159
-print(round(value))      # 3
-print(round(value, 2))   # 3.14
+round(3.14159)       # 3
+round(3.14159, 2)    # 3.14
+print(f"{19.9999:.2f} CHF")   # 20.00 CHF
 ```
 
-**f-String Formatierung:**
-
-```python
-price = 19.9999
-print(f"Preis: {price:.2f} CHF")   # Preis: 20.00 CHF
-```
-
-- `:` leitet die Formatangabe ein
-- `.2f` = zwei Nachkommastellen als float
+`:.2f` = 2 Nachkommastellen.
 
 ---
 
 ## Eingebaute Funktionen
 
-| Funktion | Beschreibung | Beispiel |
-|----------|--------------|----------|
-| `abs(x)` | Betrag | `abs(-7)` → 7 |
-| `pow(x, y)` | Potenz | `pow(2, 3)` → 8 |
-| `min(...)` | kleinster Wert | `min(5, 2, 9, -1)` → -1 |
-| `max(...)` | grösster Wert | `max(5, 2, 9, -1)` → 9 |
-| `sum(liste)` | Summe | `sum([5, 8, 2])` → 15 |
-| `round(x, n)` | runden | `round(3.14159, 2)` → 3.14 |
+| Funktion | Bedeutung |
+|----------|-----------|
+| `abs(x)` | Betrag |
+| `pow(x, y)` | Potenz |
+| `min(...)` / `max(...)` | kleinster / grösster Wert |
+| `sum(liste)` | Summe |
+| `round(x, n)` | runden |
 
 ---
 
@@ -119,92 +70,40 @@ print(f"Preis: {price:.2f} CHF")   # Preis: 20.00 CHF
 import math
 ```
 
-| Funktion | Beschreibung |
-|----------|--------------|
-| `math.sqrt(x)` | Quadratwurzel |
-| `math.pow(x, y)` | Potenz (immer float) |
-| `math.pi` | Kreiszahl π |
-| `math.ceil(x)` | aufrunden |
-| `math.floor(x)` | abrunden |
-| `math.fabs(x)` | Betrag (immer float) |
-| `math.log(x)` / `math.log10(x)` | Logarithmus |
-| `math.sin/cos/tan(x)` | Trigonometrie (Radiant!) |
-| `math.radians(x)` / `math.degrees(x)` | Grad ↔ Radiant |
+| Funktion | Bedeutung |
+|----------|-----------|
+| `math.sqrt(x)` | Wurzel |
+| `math.pi` | π |
+| `math.ceil(x)` / `math.floor(x)` | auf- / abrunden |
+| `math.pow(x, y)` / `math.fabs(x)` | wie `pow` / `abs`, immer `float` |
+| `math.sin/cos/tan` | Trigonometrie (Radiant) |
+| `math.radians` / `math.degrees` | Grad ↔ Radiant |
 
 ```python
-import math
-radius = 4
-area = math.pi * radius ** 2
-print(f"Die Kreisfläche beträgt: {area:.2f}")
+print(math.pi * 4 ** 2)         # Kreisfläche
+print(math.sqrt(abs(-49)))      # verschachtelt: innen zuerst
 ```
+
+Lange Rechnungen in **Zwischenschritte** aufteilen (Clean Code).
 
 ---
 
-## Verschachtelte Ausdrücke
+## Beispiele
 
 ```python
-import math
-value = -49
-print(math.sqrt(abs(value)))   # 7.0 (zuerst abs, dann sqrt)
-```
+# Rabatt
+discount = price * percent / 100
+final_price = price - discount
 
-Besser lesbar mit **Zwischenresultaten** (Clean Code):
-
-```python
-gross_price = 120
-discount_percent = 15
-discount = gross_price * discount_percent / 100
-net_price = gross_price - discount
-print(f"Nettopreis: {net_price:.2f} CHF")
-```
-
----
-
-## Beispiele aus dem Alltag
-
-```python
 # BMI
-weight = float(input("Gewicht in kg: "))
-height = float(input("Grösse in m: "))
 bmi = weight / (height ** 2)
-print(f"Dein BMI ist: {bmi:.2f}")
 
-# Temperatur
-celsius = float(input("Temperatur in °C: "))
-fahrenheit = (celsius * 9/5) + 32
-print(f"{celsius} °C sind {fahrenheit:.1f} °F")
-
-# Trinkgeld
-bill = float(input("Rechnungsbetrag (CHF): "))
-tip_percent = float(input("Trinkgeld in %: "))
-tip = bill * tip_percent / 100
-print(f"Total: {bill + tip:.2f} CHF")
+# Celsius → Fahrenheit
+fahrenheit = celsius * 9/5 + 32
 ```
+
+**Flaschenpost-Aufgabe:** Gesamtbetrag = Anzahl × Rückgabewert, neue Flaschen = Betrag `//` Preis, Restgeld = Betrag `%` Preis.
 
 ---
 
-## Übung: Flaschenpost-Rechner
-
-1. Eingaben: Anzahl leerer Flaschen, Rückgabewert pro Flasche (z. B. 0.30), Preis einer vollen Flasche (z. B. 1.90)
-2. Berechnen: Gesamtbetrag = Anzahl × Rückgabewert, neue Flaschen = Gesamtbetrag `//` Preis, Restgeld = Gesamtbetrag `%` Preis
-3. Ausgabe mit f-Strings, auf 2 Nachkommastellen gerundet, englische Variablennamen
-
-```python
-bottles = int(input("Leere Flaschen: "))
-deposit = float(input("Rückgabewert pro Flasche: "))
-price = float(input("Preis volle Flasche: "))
-
-total = bottles * deposit
-new_bottles = int(total // price)
-change = total % price
-print(f"Gesamtbetrag: {total:.2f} CHF")
-print(f"Neue Flaschen: {new_bottles}, Restgeld: {change:.2f} CHF")
-```
-
----
-
-## Verknüpfungen
-
-→ [[02 - Variablen und Datentypen]]
-→ [[04 - Boolsche Operatoren]]
-→ [[16 - Stdin und Stdout]]
+→ [[02 - Variablen und Datentypen]] · [[04 - Boolsche Operatoren]]

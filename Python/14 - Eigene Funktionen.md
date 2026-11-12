@@ -5,78 +5,51 @@
 
 ---
 
-## Lernziele
-
-- [ ] Funktionen mit `def` definieren und aufrufen
-- [ ] Parameter für generische Funktionen verwenden
-- [ ] Mit `return` Ergebnisse zurückgeben
-- [ ] Funktionen kombinieren
-
----
-
 ## Grundstruktur
-
-```python
-def funktionsname(parameter):
-    # eingerückter Funktionskörper
-    ...
-```
-
-- `def` + Name + Klammern + `:`
-- Der Block darunter läuft **nur**, wenn die Funktion **aufgerufen** wird
 
 ```python
 def hallo_welt():
     print("Hallo, Welt!")
 
-hallo_welt()   # erst hier läuft der Code
+hallo_welt()      # erst der Aufruf führt den Code aus
 ```
+
+`def` + Name + Klammern + `:`, darunter der eingerückte Block.
 
 ---
 
 ## Parameter
 
-Parameter machen Funktionen **generisch**: Sie funktionieren mit verschiedenen Werten, ohne dass man sie ändern muss. Reihenfolge und Format der Argumente müssen stimmen.
+Machen die Funktion **generisch**: Sie geht mit verschiedenen Werten, ohne dass ich sie ändern muss. Reihenfolge der Argumente beachten.
 
 ```python
 def berechne_gesamtpreis(preis_pro_stueck, anzahl):
-    gesamt = preis_pro_stueck * anzahl
-    print(f"Gesamtpreis: {gesamt} CHF")
+    print(f"Gesamtpreis: {preis_pro_stueck * anzahl} CHF")
 
 berechne_gesamtpreis(2.50, 4)    # 10.0 CHF
-berechne_gesamtpreis(1.20, 10)   # 12.0 CHF
 ```
-
-### Übungen
-
-- `zahlen_check()`: Zahlen 1 bis 10 durchgehen, ausgeben ob ohne Rest durch 3 teilbar
-- `aufgaben_status()`: Dictionary (Aufgabe → True/False) mit `for` durchlaufen
-- `begruesse(name)`, `berechne_flaeche(breite, hoehe)`, `praege_muenzen(betrag, wert)` mit Eingaben per `input()`
 
 ---
 
-## Rückgabewerte
+## return
 
-Mit `return` ein Ergebnis an den Aufrufer zurückgeben, statt es nur auszugeben.
+Gibt ein Ergebnis an den Aufrufer zurück, statt es nur auszugeben.
 
 ```python
 def berechne_quadrat(x):
     return x * x
 
-quadr = berechne_quadrat(5)                  # speichern: 25
-summe = quadr + berechne_quadrat(3)          # weiterrechnen: 34
-berechne_quadrat(4)                          # ignorieren (erlaubt)
+quadr = berechne_quadrat(5)               # speichern
+summe = quadr + berechne_quadrat(3)       # weiterrechnen
+berechne_quadrat(4)                       # ignorieren geht auch
 ```
 
-**Prinzipien:**
-
-- **Wiederverwendbarkeit:** Ergebnis lässt sich überall weiterverarbeiten
-- **Single Responsibility:** jede Funktion macht genau **eine** Aufgabe (z. B. rechnen, nicht ausgeben)
-- Rückgabewert darf ignoriert werden
+- **Single Responsibility:** eine Funktion macht genau eine Aufgabe (z. B. rechnen, nicht ausgeben)
+- Dann kann ich das Ergebnis speichern, weiterrechnen oder ignorieren
 
 ---
 
-## Beispiel: Rabattberechnung
+## Beispiel Rabatt
 
 ```python
 def discount_price(price, percentage):
@@ -85,17 +58,12 @@ def discount_price(price, percentage):
 def total_purchase(prices, percentage):
     total = 0
     for price in prices:
-        total += discount_price(price, percentage)   # Formel nicht neu schreiben!
+        total += discount_price(price, percentage)   # Formel nicht nochmal schreiben
     return total
 
-print(discount_price(50.0, 15))                    # 42.5
-print(total_purchase([50.0, 30.0, 20.0], 15))      # 85.0
+total_purchase([50.0, 30.0, 20.0], 15)    # 85.0
 ```
 
 ---
 
-## Verknüpfungen
-
-→ [[13 - Funktionsaufrufe]]
-→ [[15 - Eigene range-Funktionen]]
-→ [[09 - Indents und Scopes]]
+→ [[13 - Funktionsaufrufe]] · [[15 - Eigene range-Funktionen]] · [[09 - Indents und Scopes]]

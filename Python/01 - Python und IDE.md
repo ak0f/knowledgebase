@@ -1,180 +1,78 @@
 # Python und IDE
 
 **Modul:** Einstieg Programmieren (BE2026 PE)
-**Tags:** #Python #IDE #PyCharm #Installation
-
----
-
-## Lernziele
-
-- [ ] Erklären, was eine IDE ist und wozu man sie braucht
-- [ ] Python, JetBrains Toolbox und PyCharm installieren
-- [ ] Ein Projekt anlegen und "Hello, World!" ausführen
-- [ ] Wichtige Funktionen und Shortcuts von PyCharm kennen
+**Tags:** #Python #IDE #PyCharm
 
 ---
 
 ## Was ist eine IDE?
 
-**IDE = Integrated Development Environment** (Integrierte Entwicklungsumgebung).
-Ein Werkzeug, mit dem man Code effizient schreibt, ausführt und testet.
+**IDE** = Integrated Development Environment. Damit schreibe, starte und teste ich Code an einem Ort.
 
-**Warum eine IDE?**
-
-- **Syntaxhervorhebung** – Befehle, Variablen usw. haben verschiedene Farben
-- **Autovervollständigung** – spart Tipparbeit, verhindert Fehler
-- **Fehlermeldungen in Echtzeit** – schon beim Schreiben
-- **Debugger** – Programme gezielt testen
-- **Projektverwaltung** – Struktur für Dateien und Ordner
-- **Integration von Tools** – z. B. Git, Datenbanken, Testsysteme
-
-| Sprache | Beispiele für IDEs |
-|---------|--------------------|
-| Python | PyCharm, VSCode |
-| Java | IntelliJ IDEA, Eclipse |
-| C/C++ | CLion, Visual Studio |
-| Web (HTML/CSS/JS) | VSCode, WebStorm |
-
-Wir verwenden **PyCharm** von JetBrains.
+- Syntaxfarben, Autovervollständigung, Fehler direkt beim Schreiben
+- Debugger, Projektverwaltung, Git integriert
+- Wir nutzen **PyCharm** (JetBrains). Andere: VSCode, IntelliJ, Eclipse
 
 ---
 
 ## Installation
 
-### 1. Python installieren
-
-1. Download auf `python.org/downloads` (offizieller Installer)
-2. Admin-Rechte sicherstellen
-3. Installer starten, **Install Now** klicken
-4. **Add python.exe to PATH** anwählen (wichtig!)
+1. **Python** von `python.org/downloads`, Installer starten, **Add python.exe to PATH** anwählen, Install Now
+2. **JetBrains Account** mit Bbc-Mail, Studentenlizenz anfordern (gratis im Basislehrjahr)
+3. **Toolbox** installieren, einloggen, **PyCharm** installieren
 
 ![[python-installer.png]]
-
-### 2. JetBrains Account
-
-- Account mit der **Bbc-Mail** erstellen (`account.jetbrains.com`)
-- Studentenlizenz anfordern (`jetbrains.com/community/education`) – während des Basislehrjahrs gratis
-- Bestätigungslink kommt an die persönliche Mailadresse
-
-### 3. Toolbox und PyCharm
-
-- JetBrains **Toolbox** installieren, starten, einloggen
-- In der Toolbox bei *Available* **PyCharm** suchen und installieren
 
 ---
 
 ## Erstes Projekt
 
-1. PyCharm starten → **New Project**
-2. **Pure Python** wählen, Projektname vergeben
-3. Interpreter wählen (sollte schon eingerichtet sein) → **Create**
-
-### Die Oberfläche
-
-![[pycharm-new-project.png]]
-
-![[pycharm-oberflaeche.png]]
-
-- **Projektstruktur (links)** – Dateien und Ordner
-- **Editor (Mitte)** – hier schreibst du den Code
-- **Terminal (unten)** – Eingaben wie in der Kommandozeile
-- **Run/Debug-Buttons (oben rechts)** – ausführen oder testen
-
-### Erstes Programm
-
-Rechtsklick auf Projekt → *New* → *Python File* → Name `main`
+New Project → Pure Python → Name → Create. Dann Rechtsklick → New → Python File.
 
 ```python
 print("Hello, World!")
 ```
 
-Ausführen: Rechtsklick → *Run 'main'* oder grüner Play-Button.
+Starten mit dem grünen Play-Button oder Rechtsklick → Run.
+
+![[pycharm-new-project.png]]
+
+![[pycharm-oberflaeche.png]]
+
+- **Projektstruktur** links, **Editor** in der Mitte, **Terminal** unten, **Run/Debug** oben rechts
+- Rote Wellenlinie = Fehler, gelb = Warnung
+- `.venv` = virtuelle Umgebung für Bibliotheken
 
 ---
 
-## Nützliche Funktionen
-
-| Funktion | Beschreibung |
-|----------|--------------|
-| Code-Vervollständigung | schlägt beim Tippen Begriffe vor (`pri` → `print()`) |
-| Syntax-Hervorhebung | Funktionen blau, Strings grün, Kommentare grau |
-| Fehler in Echtzeit | rote Wellenlinie = Fehler, gelb = Warnung |
-| Navigation | `Strg + Klick` springt zur Definition |
-| Run / Debug | Play-Button = ausführen, Käfer = Schritt für Schritt |
-| Virtuelle Umgebung | `.venv` im Projekt, wichtig für Bibliotheken |
-| Terminal & Git | beides direkt in der IDE |
-
----
-
-## Wichtige Begriffe
+## Begriffe
 
 | Begriff | Bedeutung |
 |---------|-----------|
-| IDE | Software zum Schreiben, Testen und Verbessern von Programmen |
-| Programmieren / Coden | Anweisungen für den Computer schreiben |
 | Debuggen | Fehler (Bugs) suchen und beheben |
-| Projektstruktur | Organisation der Dateien und Ordner |
-| Autovervollständigung | IDE schlägt beim Tippen Code vor |
-| Syntaxfehler | Fehler im Aufbau, z. B. fehlende Klammer |
-| Quellcode | der geschriebene Programmtext |
-| Ausgabe | Ergebnis, das das Programm anzeigt |
+| Syntaxfehler | Fehler im Aufbau (z. B. Klammer fehlt) |
+| Quellcode | der geschriebene Code |
+| Projektstruktur | Ordner und Dateien eines Projekts |
 
 ---
 
-## Keyboard Shortcuts (Windows)
-
-**Navigation**
+## Shortcuts (Windows)
 
 | Aktion | Shortcut |
 |--------|----------|
 | Überall suchen | `Doppel-Shift` |
-| Zu Klasse gehen | `Strg + N` |
-| Zu Datei gehen | `Strg + Shift + N` |
-| Letzte Dateien | `Strg + E` |
-| Definition anzeigen | `Strg + Klick` / `Strg + B` |
-
-**Code bearbeiten**
-
-| Aktion | Shortcut |
-|--------|----------|
-| Zeile duplizieren | `Strg + D` |
-| Zeile löschen | `Strg + Y` |
-| Code formatieren | `Strg + Alt + L` |
-| Vervollständigung | `Strg + Leertaste` |
-| Zeile verschieben | `Strg + Shift + ↑/↓` |
-| Umbenennen | `Shift + F6` |
+| Zeile duplizieren / löschen | `Strg + D` / `Strg + Y` |
 | Zeile kommentieren | `Strg + /` |
-| Schnelle Aktionen | `Alt + Enter` |
-
-**Ausführen und Debuggen**
-
-| Aktion | Shortcut |
-|--------|----------|
-| Ausführen | `Shift + F10` |
-| Debuggen | `Shift + F9` |
+| Code formatieren | `Strg + Alt + L` |
+| Umbenennen | `Shift + F6` |
+| Schnelle Korrektur | `Alt + Enter` |
+| Ausführen / Debuggen | `Shift + F10` / `Shift + F9` |
 | Breakpoint | `Strg + F8` |
-| Step Over | `F8` |
-| Step Into | `F7` |
+| Step Over / Into | `F8` / `F7` |
+| Suchen / Ersetzen | `Strg + F` / `Strg + R` |
 
-**Suchen**
-
-| Aktion | Shortcut |
-|--------|----------|
-| Suchen | `Strg + F` |
-| Ersetzen | `Strg + R` |
-| In allen Dateien suchen | `Strg + Shift + F` |
+Themes: *Settings → Appearance → Theme* (z. B. Darcula). Plugins: *Settings → Plugins*.
 
 ---
 
-## Bonus: Themes und Plugins
-
-- Theme: *File → Settings → Appearance & Behavior → Theme* (z. B. Darcula dunkel)
-- Plugins: *File → Settings → Plugins* (z. B. Rainbow Brackets, Key Promoter X)
-
----
-
-## Verknüpfungen
-
-→ [[02 - Variablen und Datentypen]]
-→ [[18 - Debugging]]
-→ [[00 - MOC]]
+→ [[02 - Variablen und Datentypen]] · [[18 - Debugging]] · [[00 - MOC]]

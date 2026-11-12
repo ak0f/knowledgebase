@@ -5,114 +5,51 @@
 
 ---
 
-## Lernziele
-
-- [ ] Vergleichsoperatoren anwenden
-- [ ] `not`, `and`, `or` und XOR erklären
-- [ ] Wahrheitstabellen lesen
-- [ ] Verschachtelte Ausdrücke von innen nach aussen auswerten
-
----
-
 ## Vergleichsoperatoren
 
-Ergebnis ist immer `True` oder `False`.
+Ergebnis ist `True` oder `False`.
 
-| Operator | Bedeutung | Beispiel |
-|----------|-----------|----------|
-| `==` | gleich | `5 == 5` → True |
-| `!=` | ungleich | `5 != 3` → True |
-| `>` | grösser als | `7 > 3` → True |
-| `<` | kleiner als | `2 < 5` → True |
-| `>=` | grösser/gleich | `5 >= 5` → True |
-| `<=` | kleiner/gleich | `3 <= 4` → True |
+| Operator | Bedeutung |
+|----------|-----------|
+| `==` | gleich |
+| `!=` | ungleich |
+| `>` `<` | grösser, kleiner |
+| `>=` `<=` | grösser/gleich, kleiner/gleich |
 
-> `=` ist die **Zuweisung**, `==` ist der **Vergleich**.
+`=` weist zu, `==` vergleicht.
 
 ---
 
-## Boolesche Operatoren
+## not, and, or, xor
 
-### NOT – umkehren
+| A | B | not A | A and B | A or B | A xor B |
+|---|---|-------|---------|--------|---------|
+| F | F | T | F | F | F |
+| F | T | T | F | T | T |
+| T | F | F | F | T | T |
+| T | T | F | T | T | F |
 
-| A | not A |
-|---|-------|
-| True | False |
-| False | True |
-
-### AND – beide müssen wahr sein
-
-| A | B | A and B |
-|---|---|---------|
-| False | False | False |
-| False | True | False |
-| True | False | False |
-| True | True | **True** |
-
-### OR – mindestens einer muss wahr sein
-
-| A | B | A or B |
-|---|---|--------|
-| False | False | False |
-| False | True | **True** |
-| True | False | **True** |
-| True | True | **True** |
-
-### XOR – genau einer muss wahr sein
-
-In Python mit `!=` ausdrücken: `a != b`
-
-| A | B | A XOR B |
-|---|---|---------|
-| False | False | False |
-| False | True | **True** |
-| True | False | **True** |
-| True | True | False |
-
-**NOR** = `not (a or b)`, nur wahr wenn beide falsch sind.
-
-| Symbol | Operator |
-|--------|----------|
-| ¬ | NOT |
-| ∧ | AND |
-| ∨ | OR |
-| ⊕ | XOR |
+- `and`: beide wahr
+- `or`: mindestens einer wahr
+- `xor`: genau einer wahr, in Python `a != b`
+- `nor`: `not (a or b)`, nur wahr wenn beide falsch
 
 ---
 
 ## Ausdrücke auswerten
 
-**Strategie:**
-
 1. Innere Klammern zuerst
-2. `not` immer zuerst isoliert ausrechnen
-3. Zwischenschritte notieren
-4. Bei Unsicherheit eine Wahrheitstabelle daneben schreiben
+2. `not` zuerst einzeln ausrechnen
+3. Zwischenschritte aufschreiben
 
-### Beispiel 1: `(A and not B) or (C and A)`
+**Beispiel:** `(A and not B) or (C and A)` mit A=True, B=False, C=True
 
-A = True, B = False, C = True
+- `not B` = True
+- `A and not B` = True
+- `C and A` = True
+- True or True = **True**
 
-| Schritt | Rechnung | Ergebnis |
-|---------|----------|----------|
-| `not B` | not False | True |
-| `A and not B` | True and True | True |
-| `C and A` | True and True | True |
-| Gesamt | True or True | **True** |
-
-### Beispiel 2: `(not A or B) and (C XOR not B)`
-
-A = True, B = False, C = True
-
-| Schritt | Rechnung | Ergebnis |
-|---------|----------|----------|
-| `not A` | not True | False |
-| `not A or B` | False or False | False |
-| `not B` | not False | True |
-| `C XOR not B` | True XOR True | False |
-| Gesamt | False and False | **False** |
-
-### Beispiel 3: aus der Praxis
+**Beispiel aus der Praxis:**
 
 ```python
 alter = 20
@@ -120,23 +57,10 @@ hat_ticket = False
 ist_mitarbeiter = True
 gesperrt = False
 
-result = not ((alter >= 18 and hat_ticket) or (ist_mitarbeiter and not gesperrt))
-print(result)   # False
+not ((alter >= 18 and hat_ticket) or (ist_mitarbeiter and not gesperrt))
+# (True and False) = False, (True and True) = True, False or True = True, not True = False
 ```
-
-| Schritt | Ergebnis |
-|---------|----------|
-| `alter >= 18` | True |
-| `alter >= 18 and hat_ticket` | False |
-| `not gesperrt` | True |
-| `ist_mitarbeiter and not gesperrt` | True |
-| `(…) or (…)` | True |
-| `not True` | **False** |
 
 ---
 
-## Verknüpfungen
-
-→ [[03 - Mathematische Operatoren]]
-→ [[05 - Entscheidungen mit if, elif und else]]
-→ [[07 - While-Schleife]]
+→ [[03 - Mathematische Operatoren]] · [[05 - Entscheidungen mit if, elif und else]] · [[07 - While-Schleife]]
