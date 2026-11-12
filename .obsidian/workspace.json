@@ -8,20 +8,49 @@
         "type": "tabs",
         "children": [
           {
-            "id": "09d33ebf7c83119c",
+            "id": "b991d5e885b56907",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Telematik/06 - Zahlensysteme.md",
+                "file": "Netzwerktechnik und -Services/Cisco IOS & Grundkonfig.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "06 - Zahlensysteme"
+              "title": "Cisco IOS & Grundkonfig"
+            }
+          },
+          {
+            "id": "1a205130538c8f1f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Netzwerktechnik und -Services/Aufgabe Stern IOS.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Aufgabe Stern IOS"
+            }
+          },
+          {
+            "id": "f62b2f7893d23c61",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Python/01 - Python und IDE.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "01 - Python und IDE"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -187,31 +216,45 @@
       "bases:Neue Base erstellen": false
     }
   },
-  "active": "09d33ebf7c83119c",
+  "active": "f62b2f7893d23c61",
   "lastOpenFiles": [
-    "Telematik/05 - Adressierung MAC IPv4 IPv6.md",
-    "Telematik/06 - Zahlensysteme.md",
-    "Telematik/07 - IPv4 und CIDR.md",
-    "Telematik/01 - Einstieg und Netzarten.md",
-    "Telematik/03 - Schichtenmodelle.md",
-    "Modul106 ÜK/05 - Joins und Aggregationsfunktionen.md",
-    "Modul187ÜK/06 - Netzsicherheit.md",
-    "Modul106 ÜK/Befehle-Cheatsheet.md",
-    "Modul106 ÜK/00 - MOC.md",
-    "Modul106/07 - DB-optimieren.md",
-    "Modul106 ÜK/README.md",
-    "Modul106 ÜK/07 - DB-optimieren.md",
-    "Modul106 ÜK/Prüfungsvorbereitung.md",
-    "Modul106 ÜK/06 - Transaktion.md",
-    "Modul106 ÜK/04 - Datenschutz und Berechtigungen.md",
-    "Modul106 ÜK/03 - Datenmigration.md",
-    "Modul106 ÜK/02 - Struktur und Daten einer DB verändern.md",
-    "Modul106 ÜK/01 - SQL-Datentypen.md",
-    "Modul106 ÜK",
-    "Modul106/06 - Transaktion.md",
-    "Modul106/05 - Joins und Aggregationsfunktionen.md",
-    "Modul106/Befehle-Cheatsheet.md",
-    "Modul106/Prüfungsvorbereitung.md",
-    "Modul106/01 - SQL-Datentypen.md"
+    "Python/00 - MOC.md",
+    "Python/12 - Listen und Dictionaries.md",
+    "Python/09 - Indents und Scopes.md",
+    "Python/05 - Entscheidungen mit if, elif und else.md",
+    "Python/Bilder/uml-staubsauger.png",
+    "Python/Bilder/turtle-beispiele.png",
+    "Python/Bilder/pycharm-oberflaeche.png",
+    "Python/Bilder/pycharm-new-project.png",
+    "Python/Bilder/python-installer.png",
+    "Python/Bilder/uml-beispiel.png",
+    "Netzwerktechnik und -Services/Cisco IOS & Grundkonfig.md",
+    "Netzwerktechnik und -Services/Aufgabe Stern IOS.md",
+    "Netzwerktechnik und -Services/Aufgabe VLAN & Trunking & Switching.md",
+    "Python/Python-Cheatsheet.md",
+    "Python/Bilder/uml-symbole-2.png",
+    "Python/Bilder/uml-symbole.png",
+    "Python/Bilder/turtle-sechseck.png",
+    "Python/Bilder",
+    "Python/07 - While-Schleife.md",
+    "Python/06 - For-Schleife.md",
+    "Python/21 - Einstieg UML.md",
+    "Python/20 - Turtle.md",
+    "Python/19 - Entwickler-Tests.md",
+    "Python/18 - Debugging.md",
+    "Python/17 - Probleme lösen.md",
+    "Python/16 - Stdin und Stdout.md",
+    "Python/15 - Eigene range-Funktionen.md",
+    "Python/14 - Eigene Funktionen.md",
+    "Python/13 - Funktionsaufrufe.md",
+    "Python/11 - Strings Extended.md",
+    "Python/10 - Characters und Strings.md",
+    "Python/08 - Break und Continue.md",
+    "Python/04 - Boolsche Operatoren.md",
+    "Python/03 - Mathematische Operatoren.md",
+    "Python/02 - Variablen und Datentypen.md",
+    "Python",
+    "Netzwerktechnik und -Services",
+    "Modul106 ÜK"
   ]
 }
